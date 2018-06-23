@@ -55,9 +55,9 @@ sortImages = (id, clicked) => {
 
                 <nav className="navbar">
                     <ul>
-                        <li></li>
+
                         <li>Click a Player to Begin</li>
-                        <li>Score:{this.state.score | this.state.topScore} </li>
+                        <li>Score ={this.state.score} || Top Score={this.state.topScore} </li>
                     </ul>
                 </nav>
 
