@@ -20,7 +20,7 @@ const PlayerCard = props => (
             </ul>
         </div>
 
-        <span onClick={() => props.removePlayer(props.id)} className="remove">
+        <span onClick={() => props.removePlayer(props.id, props.clicked)} className="remove">
             x
         </span>
     </div>

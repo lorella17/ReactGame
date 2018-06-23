@@ -23,7 +23,6 @@ class App extends Component {
 sortImages = (id, clicked) => {
         const imageOrder = players;
 
-
         if (clicked) {
             console.log("true");
             imageOrder.forEach((img, index) => {
@@ -51,8 +50,14 @@ sortImages = (id, clicked) => {
     render(){
         return (
 
-
             <Wrapper>
+                <nav className="navbar">
+                    <ul>
+                        <li></li>
+                        <li>Click a Player to Begin</li>
+                        <li>Score: | Top Score: </li>
+                    </ul>
+                </nav>
 
                 <Title>Think, Guess & Click!</Title>
 
@@ -65,6 +70,7 @@ sortImages = (id, clicked) => {
                     image = {player.image}
                     position = {player.position}
                     team = {player.team}
+                    clicked = {player.clicked}
                     />
                 ))}
             </Wrapper>
