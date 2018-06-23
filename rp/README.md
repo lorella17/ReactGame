@@ -2181,7 +2181,6 @@ additional modifications:
   "scripts": {
     "predeploy": "npm run build",
 -   "deploy": "gh-pages -d build",
-+   "deploy": "gh-pages -b master -d build",
 ```
 
 #### Step 3: Deploy the site by running `npm run deploy`

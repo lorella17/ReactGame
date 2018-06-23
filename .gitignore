@@ -1,9 +1,0 @@
-# Created by .ignore support plugin (hsz.mobi)
-.idea/
-
-my-app/.gitignore
-#my-app/README.md
-#my-app/package.json
-#my-app/public/
-#my-app/src/
-#my-app/yarn.lock
