@@ -3,12 +3,14 @@ import PlayerCard from "./components/PlayerCard";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Title from "./components/Title/Title";
 import players from "./players.json";
+
 // import logo from './logo.svg';
 import "./App.css";
 
 class App extends Component {
     state = {
-        players
+        score: 0,
+        topScore: 0,
     };
 
     removePlayer = id => {
@@ -17,17 +19,16 @@ class App extends Component {
 
     };
 
-    sortImages = (id, clicked) => {
 
-        const imageOrder = this.state.image;
+sortImages = (id, clicked) => {
+        const imageOrder = players;
 
 
         if (clicked) {
             console.log("true");
             imageOrder.forEach((img, index) => {
-                // console.log(imageOrder[index].clicked);
                 imageOrder[index].clicked = false;
-                // console.log(imageOrder[index].clicked);
+
             });
             return this.setState({
                 image: imageOrder.sort(() => Math.random() - 0.5),
@@ -40,7 +41,7 @@ class App extends Component {
             imageOrder.forEach((image, index) => {
                 if (id === image.id) {
                     imageOrder[index].clicked = true;
-                    // console.log(imageOrder[index].clicked);
+
                 }
             });
             return this.setState({image: imageOrder.sort(() => Math.random() - 0.5), counter: this.state.counter + 1})
@@ -49,12 +50,15 @@ class App extends Component {
 
     render(){
         return (
-            <Wrapper>
-                <Title>Player List</Title>
 
-                {this.state.players.map(player => (
+
+            <Wrapper>
+
+                <Title>Think, Guess & Click!</Title>
+
+                {players.map(player => (
                     <PlayerCard
-                    removePlayer = {this.removePlayer}
+                    removePlayer = {this.sortImages}
                     id ={player.id}
                     key = {player.id}
                     name = {player.name}
