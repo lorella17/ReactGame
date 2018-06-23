@@ -3,6 +3,7 @@ import PlayerCard from "./components/PlayerCard";
 import Wrapper from "./components/Wrapper/Wrapper";
 import Title from "./components/Title/Title";
 import players from "./players.json";
+// import Header from "./components/Header/header";
 
 // import logo from './logo.svg';
 import "./App.css";
@@ -51,13 +52,15 @@ sortImages = (id, clicked) => {
         return (
 
             <Wrapper>
+
                 <nav className="navbar">
                     <ul>
                         <li></li>
                         <li>Click a Player to Begin</li>
-                        <li>Score: | Top Score: </li>
+                        <li>Score:{this.state.score | this.state.topScore} </li>
                     </ul>
                 </nav>
+
 
                 <Title>Think, Guess & Click!</Title>
 
@@ -73,6 +76,7 @@ sortImages = (id, clicked) => {
                     clicked = {player.clicked}
                     />
                 ))}
+
             </Wrapper>
         );
     }
